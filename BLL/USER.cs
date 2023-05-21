@@ -9,11 +9,12 @@ namespace BLL
 {
     public class USER
     {
-        public void AddUser(DAL.MP_USER user)
+        public static int AddUser(BE.USER user)
         {
-            
+            DAL.MP_USER dalUser = new DAL.MP_USER();
+            return dalUser.Insert(user);
         }
-        public BE.USER GetUser(string email)
+        public static BE.USER GetUser(string email)
         {
             DAL.MP_USER user = new DAL.MP_USER();
             return user.GetUserByEmail(email);

@@ -17,7 +17,7 @@ namespace DAL
             user.Id = int.Parse(registry["ID"].ToString());
             user.Email = registry["Email"].ToString();
             user.Name = registry["Name"].ToString();
-            user.Password = registry["Password"].ToString();
+            //user.Password = registry["Password"].ToString();
             user.Locked = bool.Parse(registry["Locked"].ToString());
             return user;
         }

@@ -19,9 +19,10 @@ namespace UI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            BLL.USER user = new BLL.USER();
-            BE.USER userBE = user.GetUser(textBox1.Text);
+            BE.USER userBE = BLL.USER.GetUser(textBox1.Text);
             MessageBox.Show(userBE.Name);
+            this.Close();
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
