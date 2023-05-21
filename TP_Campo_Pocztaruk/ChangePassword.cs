@@ -16,5 +16,22 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!(String.IsNullOrEmpty(textBox1.Text)&& String.IsNullOrEmpty(textBox2.Text)) && textBox1.Text == textBox2.Text)
+            {
+                BLL.USER uSER = new BLL.USER();
+                BE.USER tUser = new BE.USER();
+                tUser.Password = textBox1.Text;
+                uSER.User = Services.SESSIONMANAGER.GetSession.user;
+                uSER.User.Password = tUser.Password;
+                uSER.EditUser();
+            }
+            else
+            {
+                MessageBox.Show("Contraseña Invalida");
+            }
+        }
     }
 }

@@ -13,10 +13,6 @@ namespace UI
     public partial class MainScreen : Form
     {
         Form frm_Current;
-        LogIn frm_Login;
-        AddModUser frm_AddModUser;
-        UnlockUser frm_UnlockUser;
-        ChangePassword frm_ChangePassword;
         
         public MainScreen()
         {
@@ -30,13 +26,13 @@ namespace UI
                 frm_Current = new LogIn();
                 frm_Current.MdiParent = this;
                 frm_Current.Show();
-                frm_Current.FormClosed += Frm_Login_FormClosed;
+                frm_Current.FormClosed += Frm_Current_FormClosed;
             }
-            menuStrip1.Hide();
+            //menuStrip1.Hide();
         }
-        private void Frm_Login_FormClosed(object sender, FormClosedEventArgs e)
+        private void Frm_Current_FormClosed(object sender, FormClosedEventArgs e)
         {
-            frm_Login = null;
+            frm_Current = null;
             menuStrip1.Show();
         }
         private void addModUserToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,12 +43,7 @@ namespace UI
                 frm_Current = new AddModUser();
                 frm_Current.MdiParent = this;
                 frm_Current.Show();
-                //frm_AddModUser.FormClosed += frm_AddModUser_FormClosed;
             }
-        }
-        private void frm_AddModUser_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            frm_AddModUser = null;
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,22 +53,25 @@ namespace UI
 
         private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            Services.SESSIONMANAGER.Logout();
             switchForms();
             if (frm_Current == null)
             {
                 frm_Current = new LogIn();
                 frm_Current.MdiParent = this;
                 frm_Current.Show();
-                //frm_Login.FormClosed += Frm_Login_FormClosed;
             }
             menuStrip1.Hide();
         }
-        private void switchForms()
+        public void switchForms()
         {
-            frm_Current.Close();
-            frm_Current = null;
-            GC.Collect();
-            menuStrip1.Show();
+            if (frm_Current != null)
+            {
+                frm_Current.Close();
+                frm_Current = null;
+                GC.Collect();
+                menuStrip1.Show();
+            }
         }
 
         private void unlockUserToolStripMenuItem_Click(object sender, EventArgs e)
@@ -88,8 +82,6 @@ namespace UI
                 frm_Current = new UnlockUser();
                 frm_Current.MdiParent = this;
                 frm_Current.Show();
-                //forms.Add(frm_UnlockUser);
-                //frm_UnlockUser.FormClosed += Frm_Login_FormClosed;
             }
 
         }
@@ -102,7 +94,6 @@ namespace UI
                 frm_Current = new ChangePassword();
                 frm_Current.MdiParent = this;
                 frm_Current.Show();
-                //frm_UnlockUser.FormClosed += Frm_Login_FormClosed;
             }
         }
     }

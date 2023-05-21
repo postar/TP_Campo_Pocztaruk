@@ -31,11 +31,11 @@ namespace DAL
         {
             List<SqlParameter> parameters = new List<SqlParameter>
             {
-                access.CreateParameter("@id", entity.Id),
-                access.CreateParameter("@name", entity.Name),
-                access.CreateParameter("@email", entity.Email),
-                access.CreateParameter("@locked", entity.Locked),
-                access.CreateParameter("@password", entity.Password),
+                access.CreateParameter("@UserID", entity.Id),
+                access.CreateParameter("@Name", entity.Name),
+                access.CreateParameter("@Email", entity.Email),
+                access.CreateParameter("@locked", 0),
+                access.CreateParameter("@Password", entity.Password),
             };
             access.Open();
             int result = access.Write("EDIT_USER", parameters);
@@ -47,12 +47,12 @@ namespace DAL
         {
             List<SqlParameter> parameters = new List<SqlParameter>
             {
-                access.CreateParameter("@name", entity.Name),
-                access.CreateParameter("@email", entity.Email),
-                access.CreateParameter("@password", entity.Password),
+                access.CreateParameter("@Name", entity.Name),
+                access.CreateParameter("@Email", entity.Email),
+                access.CreateParameter("@Password", entity.Password),
             };
             access.Open();
-            int result = access.Write("ADD_USER", parameters);
+            int result = access.Write("CREATE_USER", parameters);
             access.Close();
             return result;
         }
@@ -60,7 +60,7 @@ namespace DAL
         public override List<BE.USER> List()
         {
             access.Open();
-            DataTable table = access.Read("USERS_LIST");
+            DataTable table = access.Read("LIST_USERS");
             access.Close();
 
             List<BE.USER> USERS = new List<BE.USER>();
@@ -82,7 +82,54 @@ namespace DAL
             access.Close();
             if (table.Rows.Count == 0) { return null; }
             return Convert(table.Rows[0]);
+        }
+        public BE.USER GetUserById(int id)
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>
+            {
+                access.CreateParameter("@id", id),
+            };
+            access.Open();
+            DataTable table = access.Read("GET_USERBYID", parameters);
+            access.Close();
+            if (table.Rows.Count == 0) { return null; }
+            return Convert(table.Rows[0]);
+        }
 
+        public BE.USER ValidatePassword(string email, string password)
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>
+            {
+                access.CreateParameter("@Email", email),
+                access.CreateParameter("@Password", password),
+            };
+            access.Open();
+            DataTable table = access.Read("VALIDATE_USER", parameters);
+            access.Close();
+            if (table.Rows.Count == 0) { return null; }
+            return Convert(table.Rows[0]);
+        }
+        public int LockAccount(BE.USER entity)
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>
+            {
+                access.CreateParameter("@UserID", entity.Id),
+            };
+            access.Open();
+            int result = access.Write("LOCK_USER", parameters);
+            access.Close();
+            return result;
+        }
+        public int UnlockAccount(BE.USER entity)
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>
+            {
+                access.CreateParameter("@UserID", entity.Id),
+            };
+            access.Open();
+            int result = access.Write("UNLOCK_USER", parameters);
+            access.Close();
+            return result;
         }
     }
 }

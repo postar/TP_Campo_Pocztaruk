@@ -12,16 +12,29 @@ namespace UI
 {
     public partial class LogIn : Form
     {
+        BE.USER tUser = new BE.USER();
+        BLL.USER user = new BLL.USER();
         public LogIn()
         {
             InitializeComponent();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            BE.USER userBE = BLL.USER.GetUser(textBox1.Text);
-            MessageBox.Show(userBE.Name);
-            this.Close();
+            tUser.Email = textBox1.Text;
+            tUser.Password = textBox2.Text;
+            user.User = tUser;
+            try { user.ValidateUser(); }
+            catch (Exception ex) {MessageBox.Show(ex.Message);}
+            if (Services.SESSIONMANAGER.GetSession.IsLoggedIn != false)
+            {
+                this.Close();
+            }
+            else
+            {
+                Services.SESSIONMANAGER.Logout();
+            }
             
         }
 
@@ -33,6 +46,16 @@ namespace UI
         private void LogIn_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
