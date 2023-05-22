@@ -36,7 +36,7 @@ namespace BLL
                     else
                     {
                         retries++;
-                        throw new Exception("Wrong Password");
+                        throw new Exception("Invalid Credentials");
                     }
                 }
             }
@@ -45,8 +45,10 @@ namespace BLL
                 BE.USER u = DALuser.GetUserByEmail(user.Email);
                 DALuser.LockAccount(u);
                 retries = 0;
+                throw new Exception("User Locked");
             }
-            throw new Exception("User Locked");
+            throw new Exception("Invalid Credentials");
+
         }
 
         public int AddUser()
