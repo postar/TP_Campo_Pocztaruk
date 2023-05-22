@@ -38,9 +38,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(417, 97);
+            this.button1.Location = new System.Drawing.Point(417, 100);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 45);
             this.button1.TabIndex = 0;
             this.button1.Text = "LogIn";
             this.button1.UseVisualStyleBackColor = true;
@@ -52,7 +52,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(259, 20);
             this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Email";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button2
@@ -71,7 +70,6 @@
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(259, 20);
             this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "PW";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label1
