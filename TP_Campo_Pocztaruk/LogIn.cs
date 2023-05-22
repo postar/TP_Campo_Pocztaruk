@@ -14,10 +14,10 @@ namespace UI
     {
         BE.USER tUser = new BE.USER();
         BLL.USER user = new BLL.USER();
+        public MainScreen mainScreen;
         public LogIn()
         {
-            InitializeComponent();
-            
+            InitializeComponent();            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,6 +29,7 @@ namespace UI
             catch (Exception ex) {MessageBox.Show(ex.Message);}
             if (Services.SESSIONMANAGER.GetSession.IsLoggedIn != false)
             {
+                MdiParent.MainMenuStrip.Show();
                 this.Close();
             }
             else

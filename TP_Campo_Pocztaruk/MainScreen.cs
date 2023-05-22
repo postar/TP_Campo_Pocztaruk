@@ -21,6 +21,7 @@ namespace UI
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
+            this.MainMenuStrip = menuStrip1;
             if (frm_Current == null)
             {
                 frm_Current = new LogIn();
@@ -28,12 +29,12 @@ namespace UI
                 frm_Current.Show();
                 frm_Current.FormClosed += Frm_Current_FormClosed;
             }
-            //menuStrip1.Hide();
+            menuStrip1.Hide();
         }
         private void Frm_Current_FormClosed(object sender, FormClosedEventArgs e)
         {
             frm_Current = null;
-            menuStrip1.Show();
+            //menuStrip1.Show();
         }
         private void addModUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
