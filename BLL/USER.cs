@@ -28,7 +28,7 @@ namespace BLL
                 {
                     u.Password = Services.ENCRYPTOR.GetSHA256(user.Password);
                     user = u;
-                    if (DALuser.ValidatePassword(user.Email, user.Password) != null)
+                    if (DALuser.ValidatePassword(user) == true)
                     {
                         Services.SESSIONMANAGER.Login(user);
                         return true;
@@ -66,6 +66,10 @@ namespace BLL
         }
         public int UnlockUser()
         {
+            if (user.Locked == false)
+            {
+                return 0;
+            }
             return DALuser.UnlockAccount(user);
         }
     }

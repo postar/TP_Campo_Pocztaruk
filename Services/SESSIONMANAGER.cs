@@ -8,21 +8,21 @@ namespace Services
 {
     public class SESSIONMANAGER
     {
-        private static object _lock = new Object();
+        private static object locked = new Object();
 
-        private static SESSIONMANAGER _session;
+        private static SESSIONMANAGER session;
         public BE.USER user { get; set; }
 
         public static SESSIONMANAGER GetSession
         {
             get
             {
-                if (_session == null)
+                if (session == null)
                 {
-                    _session = new SESSIONMANAGER();
+                    session = new SESSIONMANAGER();
                 }
 
-                return _session;
+                return session;
             }
         }
 
@@ -30,12 +30,12 @@ namespace Services
 
         public static void Login(BE.USER user)
         {
-            lock (_lock)
+            lock (locked)
             {
-                if (_session == null)
+                if (session == null)
                 {
-                    _session = new SESSIONMANAGER();
-                    _session.user = user;
+                    session = new SESSIONMANAGER();
+                    session.user = user;
                 }
                 else
                 {
@@ -46,11 +46,11 @@ namespace Services
 
         public static void Logout()
         {
-            lock (_lock)
+            lock (locked)
             {
-                if (_session != null)
+                if (session != null)
                 {
-                    _session = null;
+                    session = null;
                 }
                 else
                 {

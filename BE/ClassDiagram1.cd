@@ -8,9 +8,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="BE.USER">
-    <Position X="6.5" Y="0.5" Width="1.5" />
+    <Position X="7" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEACAABAACCAAAAgAAAAAAQAAAAEAAACAAAAAgAAAgA=</HashCode>
+      <HashCode>AEACAABgACCAIAAgAAAAAAQAAAAEAAACAAAAAgAAAgA=</HashCode>
       <FileName>USER.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -19,6 +19,27 @@
     <TypeIdentifier>
       <HashCode>AEAAAABAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GROUP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.Story">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAQAAQAAAAIAAAAAQCAAAAAAAA=</HashCode>
+      <FileName>Story.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.EPIC">
+    <Position X="9.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EPIC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.Project">
+    <Position X="9.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Project.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

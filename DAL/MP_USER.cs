@@ -17,7 +17,6 @@ namespace DAL
             user.Id = int.Parse(registry["ID"].ToString());
             user.Email = registry["Email"].ToString();
             user.Name = registry["Name"].ToString();
-            //user.Password = registry["Password"].ToString();
             user.Locked = bool.Parse(registry["Locked"].ToString());
             return user;
         }
@@ -96,18 +95,18 @@ namespace DAL
             return Convert(table.Rows[0]);
         }
 
-        public BE.USER ValidatePassword(string email, string password)
+        public bool ValidatePassword(BE.USER entity)
         {
             List<SqlParameter> parameters = new List<SqlParameter>
             {
-                access.CreateParameter("@Email", email),
-                access.CreateParameter("@Password", password),
+                access.CreateParameter("@Email", entity.Email),
+                access.CreateParameter("@Password", entity.Password),
             };
             access.Open();
             DataTable table = access.Read("VALIDATE_USER", parameters);
             access.Close();
-            if (table.Rows.Count == 0) { return null; }
-            return Convert(table.Rows[0]);
+            if (table.Rows.Count == 0) { return false; }
+            return true;
         }
         public int LockAccount(BE.USER entity)
         {
