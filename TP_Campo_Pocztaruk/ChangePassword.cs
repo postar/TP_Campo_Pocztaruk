@@ -30,7 +30,7 @@ namespace UI
             }
             else
             {
-                MessageBox.Show("Contraseña Invalida");
+                MessageBox.Show("Invalid Password");
             }
         }
     }
