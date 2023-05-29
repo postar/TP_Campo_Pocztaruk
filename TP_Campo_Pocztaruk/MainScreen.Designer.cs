@@ -70,14 +70,14 @@
             // addModUserToolStripMenuItem
             // 
             this.addModUserToolStripMenuItem.Name = "addModUserToolStripMenuItem";
-            this.addModUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addModUserToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addModUserToolStripMenuItem.Text = "Add/Mod User";
             this.addModUserToolStripMenuItem.Click += new System.EventHandler(this.addModUserToolStripMenuItem_Click);
             // 
             // unlockUserToolStripMenuItem
             // 
             this.unlockUserToolStripMenuItem.Name = "unlockUserToolStripMenuItem";
-            this.unlockUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.unlockUserToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.unlockUserToolStripMenuItem.Text = "Unlock User";
             this.unlockUserToolStripMenuItem.Click += new System.EventHandler(this.unlockUserToolStripMenuItem_Click);
             // 
@@ -94,14 +94,14 @@
             // logoutToolStripMenuItem1
             // 
             this.logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
-            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(168, 22);
             this.logoutToolStripMenuItem1.Text = "Logout";
             this.logoutToolStripMenuItem1.Click += new System.EventHandler(this.logoutToolStripMenuItem1_Click);
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
@@ -142,8 +142,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
