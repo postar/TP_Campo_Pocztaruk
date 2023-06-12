@@ -54,15 +54,20 @@ namespace UI
 
         private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Services.SESSIONMANAGER.Logout();
-            switchForms();
-            if (frm_Current == null)
+            var confirmation = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confirmation == DialogResult.Yes)
             {
-                frm_Current = new LogIn();
-                frm_Current.MdiParent = this;
-                frm_Current.Show();
+                Services.SESSIONMANAGER.Logout();
+                switchForms();
+                if (frm_Current == null)
+                {
+                    frm_Current = new LogIn();
+                    frm_Current.MdiParent = this;
+                    frm_Current.Show();
+                }
+                menuStrip1.Hide();
             }
-            menuStrip1.Hide();
+
         }
         public void switchForms()
         {
