@@ -41,7 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBACCESS.cs" />
+    <Compile Include="MAPPER.cs" />
+    <Compile Include="MP_Privilege.cs" />
+    <Compile Include="MP_USER.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{ee27ca70-b09a-4c36-99e2-60d2b3852307}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{d290f233-8f13-482b-85e0-c4f763ef0a22}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

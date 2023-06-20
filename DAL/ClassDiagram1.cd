@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DAL.DBACCESS">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAIAEAAAAECAAgAAAAAAAAAAAAAAGAAAA=</HashCode>
+      <FileName>DBACCESS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.MAPPER&lt;T&gt;">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAQAAAAAAAAIAAAAAAAAEAAAACAAAAAAAAAAI=</HashCode>
+      <FileName>MAPPER.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.MP_USER">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAEAIAAAAAAAAgIAAgAAAAAEAAAACAAAAAIAAAAI=</HashCode>
+      <FileName>MP_USER.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.MP_Privilege">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAIAAAAAAAAEAAAACAAAAAAAAAAI=</HashCode>
+      <FileName>MP_Privilege.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

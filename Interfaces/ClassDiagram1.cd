@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="Interfaces.ICrud&lt;T&gt;" Collapsed="true">
+    <Position X="2.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAIA=</HashCode>
+      <FileName>ICrud.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Interfaces.IEntity" Collapsed="true">
+    <Position X="7.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IEntity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Interfaces.IRole" Collapsed="true">
+    <Position X="7.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAgAQAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>IRole.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

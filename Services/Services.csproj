@@ -41,7 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ENCRYPTOR.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SESSIONMANAGER.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{ee27ca70-b09a-4c36-99e2-60d2b3852307}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
