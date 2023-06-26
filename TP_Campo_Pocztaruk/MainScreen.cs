@@ -102,5 +102,10 @@ namespace UI
                 frm_Current.Show();
             }
         }
+
+        private void estimationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
