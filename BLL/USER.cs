@@ -9,7 +9,6 @@ namespace BLL
     public class USER
     {
         private int retries = 0;
-        //private BE.USER user = new BE.USER();
         private BE.USER user;
 
         public BE.USER User

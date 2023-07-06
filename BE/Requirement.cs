@@ -5,9 +5,9 @@ using System.Text;
 
 namespace BE
 {
-    public class Project
+    public class Requirement
     {
-        public int Epics
+        public int Name
         {
             get => default;
             set
@@ -15,7 +15,7 @@ namespace BE
             }
         }
 
-        public int State
+        public int Description
         {
             get => default;
             set
@@ -23,7 +23,7 @@ namespace BE
             }
         }
 
-        public int Cost
+        public int Reporter
         {
             get => default;
             set
@@ -31,21 +31,7 @@ namespace BE
             }
         }
 
-        private List<Requirement> requirements;
-
-        public List<Requirement> Requirements
-        {
-            get { return requirements; }
-            set { requirements = value; }
-        }
-
-
-        public void CalculateCost()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public int Responsible
+        public int Priority
         {
             get => default;
             set

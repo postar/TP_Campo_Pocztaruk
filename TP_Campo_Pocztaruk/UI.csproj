@@ -58,6 +58,12 @@
     <Compile Include="ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Estimation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estimation.Designer.cs">
+      <DependentUpon>Estimation.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>

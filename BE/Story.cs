@@ -54,5 +54,21 @@ namespace BE
             {
             }
         }
+
+        public int StartDate
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public int EndDate
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }
