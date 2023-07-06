@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -72,6 +72,11 @@ namespace BLL
                 return 0;
             }
             return DALuser.UnlockAccount(user);
+        }
+        
+        public int DeleteUser()
+        {
+            return DALuser.Delete(user);
         }
     }
 }
