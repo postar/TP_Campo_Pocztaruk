@@ -2,6 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BLL;
 using BE;
 using System;
+using System.Collections.Generic;
 
 namespace UnitTesting
 {
@@ -12,7 +13,7 @@ namespace UnitTesting
         public void TestValidateUser()
         {
             // Arrange
-            USER user = new USER();
+            BLL.USER user = new BLL.USER();
             user.User = new BE.USER();
             user.User.Email = "test@example.com";
             user.User.Password = "password";
@@ -28,7 +29,7 @@ namespace UnitTesting
         public void TestAddUser()
         {
             // Arrange
-            USER user = new USER();
+            BLL.USER user = new BLL.USER();
             user.User = new BE.USER();
             user.User.Email = "test@example.com";
             user.User.Password = "password";
@@ -44,7 +45,7 @@ namespace UnitTesting
         public void TestEditUser()
         {
             // Arrange
-            USER user = new USER();
+            BLL.USER user = new BLL.USER();
             user.User = new BE.USER();
             user.User.Email = "test@example.com";
             user.User.Password = "password";
@@ -60,7 +61,7 @@ namespace UnitTesting
         public void TestListUsers()
         {
             // Act
-            List<BE.USER> users = USER.ListUsers();
+            List<BE.USER> users = BLL.USER.ListUsers();
 
             // Assert
             Assert.IsNotNull(users);
@@ -71,7 +72,7 @@ namespace UnitTesting
         public void TestUnlockUser()
         {
             // Arrange
-            USER user = new USER();
+            BLL.USER user = new BLL.USER();
             user.User = new BE.USER();
             user.User.Email = "test@example.com";
             user.User.Locked = true;
@@ -87,7 +88,7 @@ namespace UnitTesting
         public void TestDeleteUser()
         {
             // Arrange
-            USER user = new USER();
+            BLL.USER user = new BLL.USER();
             user.User = new BE.USER();
             user.User.Email = "test@example.com";
 
