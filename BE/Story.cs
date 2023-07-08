@@ -7,68 +7,68 @@ namespace BE
 {
     public class Story
     {
-        public int Name
+        private string name;
+
+        public string Name
         {
-            get => default;
-            set
-            {
-            }
+            get { return name; }
+            set { name = value; }
         }
+
+        private int points;
 
         public int Points
         {
-            get => default;
-            set
-            {
-            }
+            get { return points; }
+            set { points = value; }
         }
 
-        public int Type
+        private string type;
+
+        public string Type
         {
-            get => default;
-            set
-            {
-            }
+            get { return type; }
+            set { type = value; }
         }
 
-        public int Stakeholders
+        private List<BE.USER> stakeholders;
+
+        public List<BE.USER> StakeHolders
         {
-            get => default;
-            set
-            {
-            }
+            get { return stakeholders; }
+            set { stakeholders = value; }
         }
 
-        public int Reporter
+        private BE.USER reporter;
+
+        public BE.USER Reporter
         {
-            get => default;
-            set
-            {
-            }
+            get { return reporter; }
+            set { reporter = value; }
         }
 
-        public int Assignee
+        private BE.USER assignee;
+
+        public BE.USER Assignee
         {
-            get => default;
-            set
-            {
-            }
+            get { return assignee; }
+            set { assignee = value; }
         }
 
-        public int StartDate
+        private DateTime startDate;
+
+        public DateTime StartDate
         {
-            get => default;
-            set
-            {
-            }
+            get { return startDate; }
+            set { startDate = value; }
         }
 
-        public int EndDate
+        private DateTime endDate;
+
+        public DateTime EndDate
         {
-            get => default;
-            set
-            {
-            }
+            get { return endDate; }
+            set { endDate = value; }
         }
     }
 }
