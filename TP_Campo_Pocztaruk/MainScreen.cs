@@ -105,6 +105,17 @@ namespace UI
 
         private void estimationToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            switchForms();
+            if (frm_Current == null)
+            {
+                frm_Current = new Estimation();
+                frm_Current.MdiParent = this;
+                frm_Current.Show();
+            }
+        }
+
+        private void manageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }

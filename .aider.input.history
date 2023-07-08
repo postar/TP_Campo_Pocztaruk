@@ -1,0 +1,24 @@
+
+# 2023-07-06 10:35:20.684961
++add `BLL/USER.cs`
+
+# 2023-07-06 10:38:52.588755
++/exit
+
+# 2023-07-06 10:41:24.234500
++exit
+
+# 2023-07-06 10:41:28.441575
++/exit
+
+# 2023-07-06 10:41:57.931526
++create the unit testing for `BLL/USER.cs` in `UnitTesting/BLLUserTest.cs`
+
+# 2023-07-06 10:43:17.609186
++add the references the UnitTesting project to be able to use BLL project
+
+# 2023-07-06 10:52:20.596296
++/tokens
+
+# 2023-07-06 10:53:50.989243
++/exit

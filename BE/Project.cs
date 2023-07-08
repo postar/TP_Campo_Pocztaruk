@@ -7,28 +7,44 @@ namespace BE
 {
     public class Project
     {
-        public int Epics
+        private int idProject;
+
+        public int IdProject
         {
-            get => default;
-            set
-            {
-            }
+            get { return idProject; }
+            set { idProject = value; }
         }
 
-        public int State
+        private string projectName;
+
+        public string ProjectName
         {
-            get => default;
-            set
-            {
-            }
+            get { return projectName; }
+            set { projectName = value; }
         }
+
+        private USER client;
+
+        public USER Client
+        {
+            get { return client; }
+            set { client = value; }
+        }
+
+        private string state;
+
+        public string State
+        {
+            get { return state; }
+            set { state = value; }
+        }
+
+        private int cost;
 
         public int Cost
         {
-            get => default;
-            set
-            {
-            }
+            get { return cost; }
+            set { cost = value; }
         }
 
         private List<Requirement> requirements;
@@ -39,18 +55,29 @@ namespace BE
             set { requirements = value; }
         }
 
+        private USER responsible;
 
-        public void CalculateCost()
+        public USER Responsible
         {
-            throw new System.NotImplementedException();
+            get { return responsible; }
+            set { responsible = value; }
         }
 
-        public int Responsible
+        private USER pm;
+
+        public USER PM
         {
-            get => default;
-            set
-            {
-            }
+            get { return pm; }
+            set { pm = value; }
+        }
+
+
+        private List<EPIC> epics;
+
+        public List<EPIC> Epics
+        {
+            get { return epics; }
+            set { epics = value; }
         }
     }
 }

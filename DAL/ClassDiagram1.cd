@@ -28,5 +28,12 @@
       <FileName>MP_Privilege.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="DAL.MP_PROJECT">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAIAAAAAAAAEAAAACAAAAAAAAAAI=</HashCode>
+      <FileName>MP_PROJECT.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

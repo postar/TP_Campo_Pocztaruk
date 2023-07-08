@@ -36,23 +36,23 @@
     </TypeIdentifier>
   </Class>
   <Class Name="BE.Project">
-    <Position X="12.75" Y="6" Width="1.5" />
+    <Position X="15.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAACAAAAAAAAAAAAAAAABAAAAIAAAACAAAABAIAAAA=</HashCode>
+      <HashCode>ggAAAIAAAAAIAAAACAAAIBgAAAIQAAAGAAAABAIAAAQ=</HashCode>
       <FileName>Project.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BE.Requirement">
-    <Position X="14.75" Y="6" Width="1.5" />
+    <Position X="17.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAEAAAAAAQAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Requirement.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BE.COMPONENT">
-    <Position X="6.5" Y="5.25" Width="1.5" />
+    <Position X="5.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAEIAEAAAAAAwAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>COMPONENT.cs</FileName>
     </TypeIdentifier>
   </Class>
