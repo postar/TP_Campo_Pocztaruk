@@ -41,9 +41,9 @@ namespace BLL
         private int CalculateEpicCost(EPIC epic)
         {
             int epicCost = 0;
-            foreach (Story story in epic.RelatedStories)
+            foreach (BE.Story story in epic.RelatedStories)
             {
-                epicCost += story.Points * costPerPoint;
+                //epicCost += story.Points * costPerPoint;
             }
             return epicCost;
         }

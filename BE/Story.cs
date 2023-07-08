@@ -7,6 +7,14 @@ namespace BE
 {
     public class Story
     {
+        private int idStory;
+
+        public int IdStory
+        {
+            get { return idStory; }
+            set { idStory = value; }
+        }
+
         private string name;
 
         public string Name
@@ -15,9 +23,9 @@ namespace BE
             set { name = value; }
         }
 
-        private int points;
+        private int? points;
 
-        public int Points
+        public int? Points
         {
             get { return points; }
             set { points = value; }
@@ -55,20 +63,38 @@ namespace BE
             set { assignee = value; }
         }
 
-        private DateTime startDate;
+        private DateTime? startDate;
 
-        public DateTime StartDate
+        public DateTime? StartDate
         {
             get { return startDate; }
             set { startDate = value; }
         }
 
-        private DateTime endDate;
+        private DateTime? endDate;
 
-        public DateTime EndDate
+        public DateTime? EndDate
         {
             get { return endDate; }
             set { endDate = value; }
         }
+
+        private BE.Story father;
+
+        public BE.Story Father
+        {
+            get { return father; }
+            set { father = value; }
+        }
+
+
+        private BE.Project project;
+
+        public BE.Project Project
+        {
+            get { return project; }
+            set { project = value; }
+        }
+
     }
 }

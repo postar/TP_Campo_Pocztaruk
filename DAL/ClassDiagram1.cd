@@ -28,11 +28,12 @@
       <FileName>MP_Privilege.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DAL.MP_PROJECT">
+  <Class Name="DAL.MP_STORY">
     <Position X="3.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAIAAAAAAAAEAAAACAAAAAAAAAAI=</HashCode>
-      <FileName>MP_PROJECT.cs</FileName>
+      <HashCode>AAAAAEAAAAAQAAAAAIAAAAAAAAEAAAACAAAAAQAAEAI=</HashCode>
+      <FileName>MP_STORY.cs</FileName>
+      <NewMemberFileName>MP_PROJECT.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

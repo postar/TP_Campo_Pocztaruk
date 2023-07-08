@@ -46,6 +46,7 @@
     <Compile Include="PRIVILEGE.cs" />
     <Compile Include="PROJECT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="STORY.cs" />
     <Compile Include="USER.cs" />
   </ItemGroup>
   <ItemGroup>
