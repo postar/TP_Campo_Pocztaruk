@@ -17,7 +17,7 @@ namespace UnitTesting
             BE.USER user2 = new BE.USER();
             user2.Id = 2;
             BE.Project project = new BE.Project();
-            project.IdProject = 6;
+            project.IdProject = 7;
             // Act
             int result = story.CreateStory("Test Story", project, user, "Epic");
             // Assert
@@ -34,9 +34,9 @@ namespace UnitTesting
             BE.USER user2 = new BE.USER();
             user2.Id = 2;
             BE.Project project = new BE.Project();
-            project.IdProject = 6;
-            BE.Story father = new BE.Story();
-            father.IdStory = 1;
+            project.IdProject = 7;
+            BE.STORY father = new BE.STORY();
+            father.IdStory = 8;
             DateTime date = DateTime.Now;
             // Act
             int result = story.CreateStory("Test Story", project, user, "Epic", user2, 2, father);
@@ -50,61 +50,63 @@ namespace UnitTesting
             // Arrange
             MP_STORY story2 = new MP_STORY();
             // Act
-            var result = story2.GetStory(6);
+            var result = story2.GetStory(1);
             // Assert
-            Assert.AreEqual("asd", result.Name, "Esta mal el nombre");
+            Assert.AreEqual("Test Story", result.Name, "Esta mal el nombre");
         }
 
         [TestMethod]
         public void EditStory()
         {
-            //// Arrange
-            //MP_STORY story2 = new MP_STORY();
-            //BLL.STORY story = new BLL.STORY();
-            //story.Story = story2.GetStory(6);
-            //// Act
-            //story.Story.PM = new BE.USER();
-            //story.Story.PM.Id = 1;
-            //story.EditStory();
-            //var result = story2.GetStory(6);
-            //// Assert
-            //Assert.AreEqual(1, result.PM.Id, "no se guardo el PM");
-        }
-
-        [TestMethod]
-        public void StoryIntegrationTest()
-        {
             // Arrange
-            //BLL.STORY story = new BLL.STORY();
-            //MP_STORY mP_STORY = new MP_STORY();
-            //BE.USER user = new BE.USER();
-            //user.Id = 1;
-            //BE.USER user2 = new BE.USER();
-            //user2.Id = 2;
-            //// Act
-            //story.CreateStory("Test Story Total", user2, user);
-            //var result1 = mP_STORY.GetStory();
-            //Assert.AreEqual("Test Story Total", result1.StoryName, "no se guardo el nombre");
-            //story.Story = result1;
-            //story.Story.PM = new BE.USER();
-            //story.Story.PM.Id = 1;
-            //story.EditStory();
-            //var result = mP_STORY.GetStory(story.Story.IdStory);
+            MP_STORY story2 = new MP_STORY();
+            BLL.STORY story = new BLL.STORY();
+            story.Story = story2.GetStory(1);
+            // Act
+            story.Story.Assignee = new BE.USER();
+            story.Story.Assignee.Id = 1;
+            story.EditStory();
+            var result = story2.GetStory(1);
             // Assert
-            //Assert.AreEqual(1, result.PM.Id, "no se guardo el PM");
+            Assert.AreEqual(1, result.Assignee.Id, "no se guardo el Assignee");
         }
 
         [TestMethod]
         public void ListStory()
         {
-            //// Arrange
-            //MP_STORY story2 = new MP_STORY();
-            //// Act
-            //var result = story2.List();
-            //// Assert
-            //Assert.AreEqual("asd", result[0].StoryName, "Esta mal el nombre");
-            //Assert.AreEqual("Test Story Total", result[1].StoryName, "Esta mal el nombre");
-            //Assert.AreEqual("asd", result[0].Client.Name, "Esta mal el nombre");
+            // Arrange
+            MP_STORY story2 = new MP_STORY();
+            // Act
+            var result = story2.ListStories(1);
+            // Assert
+            Assert.AreEqual(2, result[0].IdStory, "Esta mal el nro");
+            Assert.AreEqual(3, result[1].IdStory, "Esta mal el nro");
+        }
+
+        [TestMethod]
+        public void ListEpic()
+        {
+            // Arrange
+            MP_STORY story2 = new MP_STORY();
+            // Act
+            var result = story2.ListEpics(6);
+            // Assert
+            Assert.AreEqual(1, result[0].IdStory, "Esta mal el nro");
+        }
+
+        [TestMethod]
+        public void EditStoryPoints()
+        {
+            // Arrange
+            MP_STORY story2 = new MP_STORY();
+            BLL.STORY story = new BLL.STORY();
+            story.Story = story2.GetStory(2);
+            // Act
+            story.Story.Points = 3;
+            story.EditStory();
+            var result = story2.GetStory(1);
+            // Assert
+            Assert.AreEqual(9, result.Points, "se calcularon mal los puntos");
         }
     }
 }

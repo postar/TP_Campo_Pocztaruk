@@ -47,14 +47,6 @@ namespace BE
             set { cost = value; }
         }
 
-        private List<Requirement> requirements;
-
-        public List<Requirement> Requirements
-        {
-            get { return requirements; }
-            set { requirements = value; }
-        }
-
         private USER responsible;
 
         public USER Responsible
@@ -71,13 +63,21 @@ namespace BE
             set { pm = value; }
         }
 
+        private List<STORY> epics;
 
-        private List<EPIC> epics;
-
-        public List<EPIC> Epics
+        public List<STORY> Epics
         {
             get { return epics; }
             set { epics = value; }
         }
+
+        private string decription;
+
+        public string Description
+        {
+            get { return decription; }
+            set { decription = value; }
+        }
+
     }
 }

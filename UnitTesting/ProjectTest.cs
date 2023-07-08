@@ -17,7 +17,7 @@ namespace UnitTesting
             BE.USER user2 = new BE.USER();
             user2.Id = 2;
             // Act
-            int result = project.CreateProject("Test Project", user2, user);
+            int result = project.CreateProject("Test Project", "REst Description", user2, user);
             // Assert
             Assert.AreNotEqual(-1, 1);
         }
@@ -60,7 +60,7 @@ namespace UnitTesting
             BE.USER user2 = new BE.USER();
             user2.Id = 2;
             // Act
-            project.CreateProject("Test Project Total", user2, user);
+            project.CreateProject("Test Project Total", "tres tristes tigres comen trigo en un trigal",user2, user);
             var result1 = mP_PROJECT.GetProject();
             Assert.AreEqual("Test Project Total", result1.ProjectName, "no se guardo el nombre");
             project.Project = result1;
@@ -84,5 +84,20 @@ namespace UnitTesting
             Assert.AreEqual("Test Project Total", result[1].ProjectName, "Esta mal el nombre");
             Assert.AreEqual("asd", result[0].Client.Name, "Esta mal el nombre");
         }
+
+        [TestMethod]
+        public void CalulateCost()
+        {
+            // Arrange
+            MP_PROJECT project2 = new MP_PROJECT();
+            BLL.PROJECT project = new BLL.PROJECT();
+            // Act
+            var result = project2.GetProject(6);
+            project.Project = result;
+            project.CalculateCost();
+            // Assert
+            Assert.AreEqual(450, project.Project.Cost, "Esta mal el costo");
+        }
+
     }
 }

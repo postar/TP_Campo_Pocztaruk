@@ -25,6 +25,7 @@ namespace DAL
             project.Responsible = user.GetUserById(int.Parse(registry["idResponsible"].ToString()));
             project.State = registry["state"].ToString();
             project.ProjectName = registry["projectName"].ToString();
+            project.Description = registry["description"].ToString();
             return project;
         }
 
@@ -42,7 +43,8 @@ namespace DAL
                 access.CreateParameter("@idResponsible", entity.Responsible.Id),
                 access.CreateParameter("@state", entity.State),
                 access.CreateParameter("@idClient", entity.Client.Id),
-                access.CreateParameter("idPM", entity.PM.Id)
+                access.CreateParameter("idPM", entity.PM.Id),
+                access.CreateParameter("description", entity.Description)
             };
             access.Open();
             int result = access.Write("EDIT_PROJECT", parameters);
@@ -79,7 +81,8 @@ namespace DAL
                 access.CreateParameter("@projectName", entity.ProjectName),
                 access.CreateParameter("@idResponsible", entity.Responsible.Id),
                 access.CreateParameter("@state", entity.State),
-                access.CreateParameter("@idClient", entity.Client.Id)
+                access.CreateParameter("@idClient", entity.Client.Id),
+                access.CreateParameter("description", entity.Description)
 
             };
             access.Open();

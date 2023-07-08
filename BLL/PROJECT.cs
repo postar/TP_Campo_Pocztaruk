@@ -1,4 +1,5 @@
 ﻿using BE;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,28 +25,21 @@ namespace BLL
 
         DAL.MP_PROJECT dalProject = new DAL.MP_PROJECT();
 
-        public List<BE.EPIC> ListEpics()
+        public List<BE.STORY> ListEpics()
         {
             return project.Epics;
         }
 
         public void CalculateCost()
         {
+            MP_STORY mP_STORY = new MP_STORY();
+            project.Epics = mP_STORY.ListEpics(project.IdProject);
             project.Cost = 0;
-            foreach (EPIC epic in project.Epics) 
+            foreach (BE.STORY epic in project.Epics) 
             {
-                project.Cost += CalculateEpicCost(epic);
+                if (epic.Points.HasValue)
+                    project.Cost += epic.Points.Value * costPerPoint;
             }
-        }
-
-        private int CalculateEpicCost(EPIC epic)
-        {
-            int epicCost = 0;
-            foreach (BE.Story story in epic.RelatedStories)
-            {
-                //epicCost += story.Points * costPerPoint;
-            }
-            return epicCost;
         }
 
         public void Assign(BE.USER pm)
@@ -53,15 +47,15 @@ namespace BLL
             project.PM = pm;
         }
 
-        public int CreateProject(string projectName, BE.USER client, BE.USER responsible)
+        public int CreateProject(string projectName, string description, BE.USER client, BE.USER responsible)
         {
             project = new BE.Project();
             project.ProjectName = projectName;
             project.Client = client;
             project.Responsible = responsible;
             project.State = "Created";
-            project.Requirements = new List<BE.Requirement>();
-            project.Epics = new List<BE.EPIC>();
+            project.Description = description;
+            project.Epics = new List<BE.STORY>();
             return dalProject.Insert(project);
 
         }

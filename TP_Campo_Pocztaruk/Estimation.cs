@@ -37,7 +37,7 @@ namespace UI
             BLL.PROJECT project = new BLL.PROJECT();
             BE.USER user = new BE.USER();
             user.Id = Convert.ToInt32(textBox2.Text);
-            project.CreateProject(textBox1.Text, user, Services.SESSIONMANAGER.GetSession.user);
+            project.CreateProject(textBox1.Text, "DescriptionTexT" ,user, Services.SESSIONMANAGER.GetSession.user);
         }
     }
 }

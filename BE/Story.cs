@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BE
 {
-    public class Story
+    public class STORY
     {
         private int idStory;
 
@@ -63,30 +63,13 @@ namespace BE
             set { assignee = value; }
         }
 
-        private DateTime? startDate;
+        private BE.STORY father;
 
-        public DateTime? StartDate
-        {
-            get { return startDate; }
-            set { startDate = value; }
-        }
-
-        private DateTime? endDate;
-
-        public DateTime? EndDate
-        {
-            get { return endDate; }
-            set { endDate = value; }
-        }
-
-        private BE.Story father;
-
-        public BE.Story Father
+        public BE.STORY Father
         {
             get { return father; }
             set { father = value; }
         }
-
 
         private BE.Project project;
 
@@ -94,6 +77,22 @@ namespace BE
         {
             get { return project; }
             set { project = value; }
+        }
+
+        private int? priority;
+
+        public int? Priority
+        {
+            get { return priority; }
+            set { priority = value; }
+        }
+
+        private string description;
+
+        public string Description
+        {
+            get { return description; }
+            set { description = value; }
         }
 
     }

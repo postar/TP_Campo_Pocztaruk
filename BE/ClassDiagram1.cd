@@ -21,32 +21,19 @@
       <FileName>GROUP.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BE.Story">
+  <Class Name="BE.STORY">
     <Position X="12.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAQAAQgAAAIAAAAAQCAAEAAAAA=</HashCode>
-      <FileName>Story.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BE.EPIC">
-    <Position X="12.75" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>EPIC.cs</FileName>
+      <HashCode>AAAAAACAAAQggAAEIAAQCAQAEAoNAIECCQCBAAAAAAA=</HashCode>
+      <FileName>STORY.cs</FileName>
+      <NewMemberFileName>Story.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BE.Project">
     <Position X="10.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ggAAAIAAAAAIAAAQCAAAMBgAAAIQAAAGAAAABAIAAAQ=</HashCode>
+      <HashCode>ggAAAIACAAAoAAAQCAAAMBgAAAAQAAAEAAAABAIAAAQ=</HashCode>
       <FileName>Project.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BE.Requirement">
-    <Position X="17.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAAEAAAAAAQAAAAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Requirement.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BE.COMPONENT">
