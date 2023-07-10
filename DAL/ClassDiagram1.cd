@@ -15,7 +15,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="DAL.MP_USER">
-    <Position X="9.5" Y="1.5" Width="1.5" />
+    <Position X="11.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAEAIAAAAAAAAgIAAgAAAAAEAAAACAAAAAIAAAAI=</HashCode>
       <FileName>MP_USER.cs</FileName>
@@ -29,11 +29,18 @@
     </TypeIdentifier>
   </Class>
   <Class Name="DAL.MP_STORY">
-    <Position X="3.5" Y="4.75" Width="1.5" />
+    <Position X="5.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAQAAAAAIAAAAAAAAEAAAACAAAAAQAAEAI=</HashCode>
+      <HashCode>AAAIAEAAAAAQAAAEAIAAAAAAAAEAAAACACgAAAAAEAI=</HashCode>
       <FileName>MP_STORY.cs</FileName>
       <NewMemberFileName>MP_PROJECT.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.MP_PROJECT">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAIAAAAAAAAEAAAACAgAAAQAAEAI=</HashCode>
+      <FileName>MP_PROJECT.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

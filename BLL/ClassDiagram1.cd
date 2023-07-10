@@ -8,23 +8,23 @@
     </TypeIdentifier>
   </Class>
   <Class Name="BLL.PRIVILEGE">
-    <Position X="6.5" Y="2.25" Width="1.5" />
+    <Position X="5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAIAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PRIVILEGE.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BLL.GROUP">
-    <Position X="6.5" Y="0.5" Width="1.5" />
+    <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GROUP.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BLL.PROJECT">
-    <Position X="1.5" Y="4.5" Width="1.5" />
+    <Position X="3.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAQAAAAAAAAEAAAACAAABCgAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAAACAQAAAABAAAEAAAAKAAABCgAAAAAAgAAAAAACAA=</HashCode>
       <FileName>PROJECT.cs</FileName>
     </TypeIdentifier>
   </Class>
