@@ -70,7 +70,7 @@ namespace DAL
             {
                 result = cmd.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 result = -1;
             }

@@ -18,6 +18,7 @@ namespace DAL
             user.Email = registry["Email"].ToString();
             user.Name = registry["Name"].ToString();
             user.Locked = bool.Parse(registry["Locked"].ToString());
+            //user.Profile = BE.PROFILE (int.Parse(registry["Profile"].ToString()));
             return user;
         }
 
@@ -35,6 +36,7 @@ namespace DAL
                 access.CreateParameter("@Email", entity.Email),
                 access.CreateParameter("@locked", 0),
                 access.CreateParameter("@Password", entity.Password),
+                access.CreateParameter("@Profile", entity.Profile.profileCode),
             };
             access.Open();
             int result = access.Write("EDIT_USER", parameters);
@@ -49,6 +51,7 @@ namespace DAL
                 access.CreateParameter("@Name", entity.Name),
                 access.CreateParameter("@Email", entity.Email),
                 access.CreateParameter("@Password", entity.Password),
+                access.CreateParameter("@Profile", entity.Profile.profileCode),
             };
             access.Open();
             int result = access.Write("CREATE_USER", parameters);

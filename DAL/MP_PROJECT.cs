@@ -1,5 +1,4 @@
-﻿using BE;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -8,9 +7,9 @@ using System.Text;
 
 namespace DAL
 {
-    public class MP_PROJECT : MAPPER<Project>
+    public class MP_PROJECT : MAPPER<BE.Project>
     {
-        public override Project Convert(DataRow registry)
+        public override BE.Project Convert(DataRow registry)
         {
             MP_USER user = new MP_USER();
             BE.Project project = new BE.Project();
@@ -29,12 +28,12 @@ namespace DAL
             return project;
         }
 
-        public override int Delete(Project entity)
+        public override int Delete(BE.Project entity)
         {
             throw new NotImplementedException();
         }
 
-        public override int Edit(Project entity)
+        public override int Edit(BE.Project entity)
         {
             List<SqlParameter> parameters = new List<SqlParameter>
             {
@@ -52,7 +51,7 @@ namespace DAL
             return result;
         }
 
-        public Project GetProject(int idProject)
+        public BE.Project GetProject(int idProject)
         {
             List<SqlParameter> parameters = new List<SqlParameter>
             {
@@ -65,7 +64,7 @@ namespace DAL
             return Convert(table.Rows[0]);
         }
 
-        public Project GetProject()
+        public BE.Project GetProject()
         {
             access.Open();
             DataTable table = access.Read("GET_LASTPROJECT");
@@ -74,7 +73,7 @@ namespace DAL
             return Convert(table.Rows[0]);
         }
 
-        public override int Insert(Project entity)
+        public override int Insert(BE.Project entity)
         {
             List<SqlParameter> parameters = new List<SqlParameter>
             {
@@ -91,7 +90,7 @@ namespace DAL
             return result;
         }
 
-        public override List<Project> List()
+        public override List<BE.Project> List()
         {
             access.Open();
             DataTable table = access.Read("LIST_PROJECTS");
@@ -105,7 +104,7 @@ namespace DAL
             return PROJECTS;
         }
 
-        private Project ListElementConvert(DataRow registry)
+        private BE.Project ListElementConvert(DataRow registry)
         {
             MP_USER user = new MP_USER();
             BE.Project project = new BE.Project();
@@ -118,7 +117,7 @@ namespace DAL
             return project;
         }
 
-        private USER CreateUserName(string v)
+        private BE.USER CreateUserName(string v)
         {
             var aux = new BE.USER();
             aux.Name = v;

@@ -21,7 +21,7 @@ namespace UI
         {
             if (!(String.IsNullOrEmpty(textBox1.Text)&& String.IsNullOrEmpty(textBox2.Text)) && textBox1.Text == textBox2.Text)
             {
-                BLL.USER uSER = new BLL.USER();
+                BLL.BLLUSER uSER = new BLL.BLLUSER();
                 BE.USER tUser = new BE.USER();
                 tUser.Password = textBox1.Text;
                 uSER.User = Services.SESSIONMANAGER.GetSession.user;

@@ -1,5 +1,4 @@
-﻿using BE;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class STORY
+    public class BLLSTORY
     {
         private BE.STORY story;
         public BE.STORY Story

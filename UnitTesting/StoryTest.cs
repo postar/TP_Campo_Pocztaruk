@@ -11,7 +11,7 @@ namespace UnitTesting
         public void InsertStory()
         {
             // Arrange
-            BLL.STORY story = new BLL.STORY();
+            BLL.BLLSTORY story = new BLL.BLLSTORY();
             BE.USER user = new BE.USER();
             user.Id = 1;
             BE.USER user2 = new BE.USER();
@@ -28,7 +28,7 @@ namespace UnitTesting
         public void InsertFullStory()
         {
             // Arrange
-            BLL.STORY story = new BLL.STORY();
+            BLL.BLLSTORY story = new BLL.BLLSTORY();
             BE.USER user = new BE.USER();
             user.Id = 1;
             BE.USER user2 = new BE.USER();
@@ -60,7 +60,7 @@ namespace UnitTesting
         {
             // Arrange
             MP_STORY story2 = new MP_STORY();
-            BLL.STORY story = new BLL.STORY();
+            BLL.BLLSTORY story = new BLL.BLLSTORY();
             story.Story = story2.GetStory(1);
             // Act
             story.Story.Assignee = new BE.USER();
@@ -99,7 +99,7 @@ namespace UnitTesting
         {
             // Arrange
             MP_STORY story2 = new MP_STORY();
-            BLL.STORY story = new BLL.STORY();
+            BLL.BLLSTORY story = new BLL.BLLSTORY();
             story.Story = story2.GetStory(2);
             // Act
             story.Story.Points = 3;

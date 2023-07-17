@@ -11,7 +11,7 @@ namespace UnitTesting
         public void InsertProject()
         {
             // Arrange
-            BLL.PROJECT project = new BLL.PROJECT();
+            BLL.BLLPROJECT project = new BLL.BLLPROJECT();
             BE.USER user = new BE.USER();
             user.Id = 1;
             BE.USER user2 = new BE.USER();
@@ -38,7 +38,7 @@ namespace UnitTesting
         {
             // Arrange
             MP_PROJECT project2 = new MP_PROJECT();
-            BLL.PROJECT project = new BLL.PROJECT();
+            BLL.BLLPROJECT project = new BLL.BLLPROJECT();
             project.Project = project2.GetProject(6);
             // Act
             project.Project.PM = new BE.USER();
@@ -53,7 +53,7 @@ namespace UnitTesting
         public void ProjectIntegrationTest()
         {
             // Arrange
-            BLL.PROJECT project = new BLL.PROJECT();
+            BLL.BLLPROJECT project = new BLL.BLLPROJECT();
             MP_PROJECT mP_PROJECT = new MP_PROJECT();
             BE.USER user = new BE.USER();
             user.Id = 1;
@@ -90,7 +90,7 @@ namespace UnitTesting
         {
             // Arrange
             MP_PROJECT project2 = new MP_PROJECT();
-            BLL.PROJECT project = new BLL.PROJECT();
+            BLL.BLLPROJECT project = new BLL.BLLPROJECT();
             // Act
             var result = project2.GetProject(6);
             project.Project = result;

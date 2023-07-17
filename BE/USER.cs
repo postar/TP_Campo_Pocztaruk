@@ -49,25 +49,12 @@ namespace BE
             set { locked = value; }
         }
 
+        private PROFILE PROFILE;
 
-        private List<PRIVILEGE> privileges = new List<PRIVILEGE>();
-        public List<PRIVILEGE> Privileges
+        public PROFILE Profile
         {
-            get { return privileges; }
-
-        }
-
-        public bool Validate(PRIVILEGE p)
-        {
-            bool found = false;
-            int i = 0;
-
-            while (i < privileges.Count && !found)
-            {
-                found = privileges[i].Validate(p);
-                i++;
-            }
-            return found;
+            get { return PROFILE; }
+            set { PROFILE = value; }
         }
 
     }

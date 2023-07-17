@@ -41,9 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MP_BACKUP.cs" />
+    <Compile Include="MP_LOGBOOK.cs" />
+    <Compile Include="MP_LANGUAJE.cs" />
+    <Compile Include="MP_CPSP.cs" />
+    <Compile Include="MP_PROFILE.cs" />
+    <Compile Include="MP_PRIVILEGE.cs" />
     <Compile Include="DBACCESS.cs" />
     <Compile Include="MAPPER.cs" />
-    <Compile Include="MP_Privilege.cs" />
     <Compile Include="MP_STORY.cs" />
     <Compile Include="MP_PROJECT.cs" />
     <Compile Include="MP_USER.cs" />

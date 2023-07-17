@@ -41,14 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="COMPONENT.cs" />
-    <Compile Include="Developer.cs" />
-    <Compile Include="GROUP.cs" />
+    <Compile Include="COMPOSITEPRIVILEGE.cs" />
+    <Compile Include="CPSP.cs" />
+    <Compile Include="LANGUAJE.cs" />
+    <Compile Include="LANGUAJECONTROL.cs" />
+    <Compile Include="LOGBOOK.cs" />
     <Compile Include="PRIVILEGE.cs" />
+    <Compile Include="PROFILE.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SIMPLEPRIVILEGE.cs" />
     <Compile Include="STORY.cs" />
     <Compile Include="USER.cs" />
+    <Compile Include="USERCONTROL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

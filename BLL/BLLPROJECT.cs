@@ -1,6 +1,4 @@
-﻿using BE;
-using DAL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -8,7 +6,7 @@ using System.Text;
 
 namespace BLL
 {
-    public class PROJECT
+    public class BLLPROJECT
     {
         public static List<BE.Project> GetProjects() 
         {
@@ -32,7 +30,7 @@ namespace BLL
 
         public void CalculateCost()
         {
-            MP_STORY mP_STORY = new MP_STORY();
+            DAL.MP_STORY mP_STORY = new DAL.MP_STORY();
             project.Epics = mP_STORY.ListEpics(project.IdProject);
             project.Cost = 0;
             foreach (BE.STORY epic in project.Epics) 
@@ -60,12 +58,12 @@ namespace BLL
 
         }
 
-        public Project GetProject(int idProject)
+        public BE.Project GetProject(int idProject)
         {
             return dalProject.GetProject(idProject);
         }
 
-        public Project GetProject()
+        public BE.Project GetProject()
         {
             return dalProject.GetProject();
         }

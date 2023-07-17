@@ -31,7 +31,7 @@ namespace UI
         {
             if (!(String.IsNullOrEmpty(textBox1.Text) && String.IsNullOrEmpty(textBox2.Text) && String.IsNullOrEmpty(textBox3.Text) && String.IsNullOrEmpty(textBox4.Text)))
             {
-                BLL.USER uSER = new BLL.USER();
+                BLL.BLLUSER uSER = new BLL.BLLUSER();
                 BE.USER tUser = new BE.USER();
                 tUser.Id = Convert.ToInt32(textBox1.Text);
                 tUser.Name = textBox2.Text;
@@ -46,7 +46,7 @@ namespace UI
         {
             if (!(String.IsNullOrEmpty(textBox2.Text)&& String.IsNullOrEmpty(textBox3.Text)&&String.IsNullOrEmpty(textBox4.Text)))
             {
-                BLL.USER uSER = new BLL.USER();
+                BLL.BLLUSER uSER = new BLL.BLLUSER();
                 BE.USER tUser = new BE.USER();
                 tUser.Name = textBox2.Text;
                 tUser.Email = textBox3.Text;

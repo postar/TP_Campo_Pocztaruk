@@ -1,44 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace BE
 {
-    public class PRIVILEGE
+    public abstract class PRIVILEGE
     {
-        public PRIVILEGE()
-        {
 
-        }
-        public PRIVILEGE(int i)
-        {
-            id = i;
-        }
-        public PRIVILEGE(int i, string n)
-        {
-            id = i;
-            this.name = n;
-        }
+        private string Code;
+        private string Type;
 
-        private int id;
-        public int Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
+        public string code { get => Code; set => Code = value; }
+        public string type { get => Type; set => Type = value; }
+        public abstract List<PRIVILEGE> ReturnPrivileges();
 
-        private string name;
-
-        public string Name
+        public PRIVILEGE(string code)
         {
-            get { return name; }
-            set { name = value; }
-        }
-        public virtual bool Validate(PRIVILEGE p)
-        {
-            return id == p.id;
+            this.code = code;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace UI
         private void refreshTable ()
         {
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = BLL.USER.ListUsers();
+            dataGridView1.DataSource = BLL.BLLUSER.ListUsers();
         }
         public UnlockUser()
         {
@@ -38,7 +38,7 @@ namespace UI
             try 
             {
                 uSER.Id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-                BLL.USER bLL = new BLL.USER();
+                BLL.BLLUSER bLL = new BLL.BLLUSER();
                 bLL.User = uSER;
                 bLL.UnlockUser();
                 refreshTable();

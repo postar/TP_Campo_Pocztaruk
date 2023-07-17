@@ -34,7 +34,7 @@ namespace UI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            BLL.PROJECT project = new BLL.PROJECT();
+            BLL.BLLPROJECT project = new BLL.BLLPROJECT();
             BE.USER user = new BE.USER();
             user.Id = Services.SESSIONMANAGER.GetSession.user.Id;
             project.CreateProject(textBox1.Text, "DescriptionTexT" ,user, Services.SESSIONMANAGER.GetSession.user);

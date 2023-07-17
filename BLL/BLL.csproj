@@ -41,13 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GROUP.cs" />
-    <Compile Include="LOGIC.cs" />
-    <Compile Include="PRIVILEGE.cs" />
-    <Compile Include="PROJECT.cs" />
+    <Compile Include="BLLBACKUP.cs" />
+    <Compile Include="BLLLogBook.cs" />
+    <Compile Include="BLLLanguaje.cs" />
+    <Compile Include="BLLCPSP.cs" />
+    <Compile Include="BLLProfile.cs" />
+    <Compile Include="BLLPrivilege.cs" />
+    <Compile Include="BLLPROJECT.cs" />
+    <Compile Include="GestionarIdioma.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="STORY.cs" />
-    <Compile Include="USER.cs" />
+    <Compile Include="BLLSTORY.cs" />
+    <Compile Include="BLLUSER.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BE\BE.csproj">

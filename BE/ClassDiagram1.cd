@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="BE.PRIVILEGE">
-    <Position X="6.5" Y="0.5" Width="1.5" />
+    <Position X="6.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAACAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAABAAAgAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PRIVILEGE.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -12,13 +12,6 @@
     <TypeIdentifier>
       <HashCode>AEACAABgACCAIAAgAAAAAAQAAAAEAAACAAAAAgAAAgA=</HashCode>
       <FileName>USER.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BE.GROUP">
-    <Position X="6.5" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AEAAAABAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>GROUP.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BE.STORY">
@@ -37,10 +30,66 @@
     </TypeIdentifier>
   </Class>
   <Class Name="BE.COMPONENT">
-    <Position X="2" Y="0.5" Width="1.5" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAEIAEAAAAAAwAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>COMPONENT.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.LANGUAJE">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAEAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LANGUAJE.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.LANGUAJECONTROL">
+    <Position X="14.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAMAAAADAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>LANGUAJECONTROL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.CPSP">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAgAAAAIAQAAAAAAAAA=</HashCode>
+      <FileName>CPSP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.PROFILE">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAAABAAAAAAAAAAAAAAAACIAAAAAAAAAABAAAAAQAA=</HashCode>
+      <FileName>PROFILE.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.SIMPLEPRIVILEGE">
+    <Position X="4.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SIMPLEPRIVILEGE.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.COMPOSITEPRIVILEGE">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAABAAAAAABAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>COMPOSITEPRIVILEGE.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.USERCONTROL">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAIAAAAAAAAAAAAAgAAAAIAAAAAAA=</HashCode>
+      <FileName>USERCONTROL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.LOGBOOK">
+    <Position X="16" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABBAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAQQ=</HashCode>
+      <FileName>LOGBOOK.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class USER
+    public class BLLUSER
     {
         private int retries = 0;
         private BE.USER user;
@@ -53,6 +53,8 @@ namespace BLL
         public int AddUser()
         {
             user.Password = Services.ENCRYPTOR.GetSHA256(user.Password);
+            if (DALuser.GetUserByEmail(user.Email) != null)
+                return -1;
             return DALuser.Insert(user);
         }
         public int EditUser()

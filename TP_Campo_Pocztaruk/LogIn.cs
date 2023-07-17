@@ -13,7 +13,7 @@ namespace UI
     public partial class LogIn : Form
     {
         BE.USER tUser = new BE.USER();
-        BLL.USER user = new BLL.USER();
+        BLL.BLLUSER user = new BLL.BLLUSER();
         public MainScreen mainScreen;
         public LogIn()
         {

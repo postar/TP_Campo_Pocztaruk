@@ -1,5 +1,4 @@
-﻿using BE;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -11,9 +10,9 @@ using System.Xml.Linq;
 
 namespace DAL
 {
-    public class MP_STORY : MAPPER<STORY>
+    public class MP_STORY : MAPPER<BE.STORY>
     {
-        public override STORY Convert(DataRow registry)
+        public override BE.STORY Convert(DataRow registry)
         {
             MP_USER user = new MP_USER();
             MP_PROJECT project = new MP_PROJECT();
@@ -44,12 +43,12 @@ namespace DAL
             return story;
         }
 
-        public override int Delete(STORY entity)
+        public override int Delete(BE.STORY entity)
         {
             throw new NotImplementedException();
         }
 
-        public override int Edit(STORY entity)
+        public override int Edit(BE.STORY entity)
         {
             List<SqlParameter> parameters = LoadParams(entity);
             parameters.Add(access.CreateParameter("@idStory", entity.IdStory));
@@ -60,7 +59,7 @@ namespace DAL
             return result;
         }
 
-        public STORY GetStory(int idStory)
+        public BE.STORY GetStory(int idStory)
         {
             List<SqlParameter> parameters = new List<SqlParameter>
             {
@@ -73,7 +72,7 @@ namespace DAL
             return Convert(table.Rows[0]);
         }
 
-        public STORY GetStory()
+        public BE.STORY GetStory()
         {
             access.Open();
             DataTable table = access.Read("GET_LASTSTORY");
@@ -84,7 +83,7 @@ namespace DAL
 
 
 
-        public override int Insert(STORY entity)
+        public override int Insert(BE.STORY entity)
         {
             List<SqlParameter> parameters = LoadParams(entity);
 
@@ -94,7 +93,7 @@ namespace DAL
             return result;
         }
 
-        private List<SqlParameter> LoadParams(STORY entity)
+        private List<SqlParameter> LoadParams(BE.STORY entity)
         {
             List<SqlParameter> parameters = new List<SqlParameter>
             {
@@ -120,7 +119,7 @@ namespace DAL
             return parameters;
         }
 
-        private STORY ListStoryElementConvert(DataRow registry)
+        private BE.STORY ListStoryElementConvert(DataRow registry)
         {
             BE.STORY story = new BE.STORY();
             story.IdStory = int.Parse(registry["idStory"].ToString());
@@ -130,7 +129,7 @@ namespace DAL
             return story;
         }
 
-        private USER CreateUserName(string v)
+        private BE.USER CreateUserName(string v)
         {
             var aux = new BE.USER();
             aux.Name = v;
@@ -177,7 +176,7 @@ namespace DAL
             return STORYS;
         }
 
-        public override List<STORY> List()
+        public override List<BE.STORY> List()
         {
             throw new NotImplementedException();
         }
