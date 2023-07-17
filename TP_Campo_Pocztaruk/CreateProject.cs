@@ -10,16 +10,22 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class Estimation : Form
+    public partial class CreateProject : Form
     {
-        public Estimation()
+        public void Refresh()
+        {
+            BLL.BLLPROJECT project = new BLL.BLLPROJECT();
+            dataGridView1.DataSource = project.ListEpics();
+        }
+        public CreateProject()
         {
             InitializeComponent();
         }
 
         private void Estimation_Load(object sender, EventArgs e)
         {
-
+            
+            //comboBox1.DataSource = 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -38,6 +44,16 @@ namespace UI
             BE.USER user = new BE.USER();
             user.Id = Services.SESSIONMANAGER.GetSession.user.Id;
             project.CreateProject(textBox1.Text, "DescriptionTexT" ,user, Services.SESSIONMANAGER.GetSession.user);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

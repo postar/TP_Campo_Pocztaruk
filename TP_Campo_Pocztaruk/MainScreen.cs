@@ -108,7 +108,7 @@ namespace UI
             switchForms();
             if (frm_Current == null)
             {
-                frm_Current = new Estimation();
+                frm_Current = new CreateProject();
                 frm_Current.MdiParent = this;
                 frm_Current.Show();
             }
