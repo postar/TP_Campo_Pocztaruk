@@ -19,7 +19,7 @@ namespace UnitTesting
             BE.Project project = new BE.Project();
             project.IdProject = 7;
             // Act
-            int result = story.CreateStory("Test Story", project, user, "Epic");
+            int result = story.CreateStory("Test Story", project, user);
             // Assert
             Assert.AreNotEqual(-1, 1);
         }
@@ -39,7 +39,7 @@ namespace UnitTesting
             father.IdStory = 8;
             DateTime date = DateTime.Now;
             // Act
-            int result = story.CreateStory("Test Story", project, user, "Epic", user2, 2, father);
+            int result = story.CreateStory("Test Story", project, user, user2, 2, father);
             // Assert
             Assert.AreNotEqual(-1, 1);
         }

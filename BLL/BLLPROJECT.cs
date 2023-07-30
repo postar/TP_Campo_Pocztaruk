@@ -25,7 +25,9 @@ namespace BLL
 
         public List<BE.STORY> ListEpics()
         {
-            return project.Epics;
+            if(project != null)
+                return project.Epics;
+            return new List<BE.STORY>();
         }
 
         public void CalculateCost()
@@ -36,7 +38,13 @@ namespace BLL
             foreach (BE.STORY epic in project.Epics) 
             {
                 if (epic.Points.HasValue)
-                    project.Cost += epic.Points.Value * costPerPoint;
+                    project.Cost += (int)epic.Points * costPerPoint;
+
+                foreach (BE.STORY story in mP_STORY.ListStories(epic.IdStory))
+                {
+                    if(story.Points.HasValue)
+                        project.Cost += (int)story.Points * costPerPoint;
+                }
             }
         }
 
@@ -58,13 +66,15 @@ namespace BLL
 
         }
 
-        public BE.Project GetProject(int idProject)
+        public static BE.Project GetProject(int idProject)
         {
+            DAL.MP_PROJECT dalProject = new DAL.MP_PROJECT();
             return dalProject.GetProject(idProject);
         }
 
-        public BE.Project GetProject()
+        public static BE.Project GetProject()
         {
+            DAL.MP_PROJECT dalProject = new DAL.MP_PROJECT();
             return dalProject.GetProject();
         }
 

@@ -33,7 +33,6 @@ namespace BLL
             string storyName, 
             BE.Project project, 
             BE.USER reporter,
-            string type, 
             BE.USER assignee = null, 
             int? points = null, 
             BE.STORY father = null, 
@@ -45,12 +44,15 @@ namespace BLL
             story.Name = storyName;
             story.Project = project;
             story.Reporter = reporter;
-            story.Type = type;
             story.Assignee = assignee;
             story.Points = points;
             story.Father = father;
             story.Description = description;
             story.Priority = priority;
+            if (father != null)
+                story.Type = "Story";
+            else
+                story.Type = "Epic";
 
             return dalStory.Insert(story);
 
@@ -60,11 +62,6 @@ namespace BLL
         {
             return dalStory.GetStory(idStory);
         }
-
-        //public STORY GetStory()
-        //{
-        //    return dalStory.GetStory();
-        //}
 
         public int EditStory()
         {

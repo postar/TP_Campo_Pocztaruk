@@ -70,7 +70,10 @@ namespace DAL
             DataTable table = access.Read("GET_LASTPROJECT");
             access.Close();
             if (table.Rows.Count == 0) { return null; }
-            return Convert(table.Rows[0]);
+            BE.Project project = Convert(table.Rows[0]);
+            MP_STORY epic = new MP_STORY();
+            project.Epics = epic.ListEpics(project.IdProject);
+            return project;
         }
 
         public override int Insert(BE.Project entity)

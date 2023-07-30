@@ -42,10 +42,10 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_CreateProject
             // 
             this.button1.Location = new System.Drawing.Point(315, 63);
-            this.button1.Name = "button1";
+            this.button1.Name = "btn_CreateProject";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Add User";
@@ -70,24 +70,24 @@
             this.textBox1.TabIndex = 2;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // tb_Cost
             // 
             this.textBox2.Location = new System.Drawing.Point(83, 91);
-            this.textBox2.Name = "textBox2";
+            this.textBox2.Name = "tb_Cost";
             this.textBox2.Size = new System.Drawing.Size(207, 20);
             this.textBox2.TabIndex = 3;
             // 
-            // textBox3
+            // tb_StoryName
             // 
             this.textBox3.Location = new System.Drawing.Point(83, 117);
-            this.textBox3.Name = "textBox3";
+            this.textBox3.Name = "tb_StoryName";
             this.textBox3.Size = new System.Drawing.Size(207, 20);
             this.textBox3.TabIndex = 4;
             // 
-            // textBox4
+            // tb_Description
             // 
             this.textBox4.Location = new System.Drawing.Point(83, 143);
-            this.textBox4.Name = "textBox4";
+            this.textBox4.Name = "tb_Description";
             this.textBox4.PasswordChar = '*';
             this.textBox4.Size = new System.Drawing.Size(207, 20);
             this.textBox4.TabIndex = 5;
@@ -120,11 +120,11 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Email";
             // 
-            // label4
+            // lbl_StoryName
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(30, 150);
-            this.label4.Name = "label4";
+            this.label4.Name = "lbl_StoryName";
             this.label4.Size = new System.Drawing.Size(25, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "PW";
@@ -138,12 +138,12 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Privilege";
             // 
-            // comboBox1
+            // cb_ClientSelect
             // 
             this.comboBox1.Enabled = false;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(83, 169);
-            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Name = "cb_ClientSelect";
             this.comboBox1.Size = new System.Drawing.Size(207, 21);
             this.comboBox1.TabIndex = 12;
             // 

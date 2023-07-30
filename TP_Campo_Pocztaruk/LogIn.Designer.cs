@@ -36,10 +36,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_CreateProject
             // 
             this.button1.Location = new System.Drawing.Point(417, 100);
-            this.button1.Name = "button1";
+            this.button1.Name = "btn_CreateProject";
             this.button1.Size = new System.Drawing.Size(75, 45);
             this.button1.TabIndex = 0;
             this.button1.Text = "LogIn";
@@ -64,10 +64,10 @@
             this.button2.Text = "Change Lang";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // tb_Cost
             // 
             this.textBox2.Location = new System.Drawing.Point(152, 126);
-            this.textBox2.Name = "textBox2";
+            this.textBox2.Name = "tb_Cost";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(259, 20);
             this.textBox2.TabIndex = 4;

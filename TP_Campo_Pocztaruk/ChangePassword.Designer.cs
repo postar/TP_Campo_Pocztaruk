@@ -45,10 +45,10 @@
             this.textBox1.Size = new System.Drawing.Size(158, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // textBox2
+            // tb_Cost
             // 
             this.textBox2.Location = new System.Drawing.Point(64, 108);
-            this.textBox2.Name = "textBox2";
+            this.textBox2.Name = "tb_Cost";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(158, 20);
             this.textBox2.TabIndex = 1;
@@ -58,10 +58,10 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // button1
+            // btn_CreateProject
             // 
             this.button1.Location = new System.Drawing.Point(80, 144);
-            this.button1.Name = "button1";
+            this.button1.Name = "btn_CreateProject";
             this.button1.Size = new System.Drawing.Size(120, 23);
             this.button1.TabIndex = 3;
             this.button1.Text = "Change Password";

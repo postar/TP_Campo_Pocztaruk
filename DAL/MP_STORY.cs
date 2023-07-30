@@ -81,7 +81,19 @@ namespace DAL
             return Convert(table.Rows[0]);
         }
 
-
+        public List<BE.STORY> GetStoryByPID()
+        {
+            access.Open();
+            DataTable table = access.Read("GET_STORYBYPID");
+            access.Close();
+            if (table.Rows.Count == 0) { return null; }
+            List<BE.STORY> stories = new List<BE.STORY>();
+            foreach (DataRow row in table.Rows)
+            {
+                stories.Add(Convert(row));
+            }
+            return stories;
+        }
 
         public override int Insert(BE.STORY entity)
         {
@@ -150,8 +162,8 @@ namespace DAL
 
             List<BE.STORY> STORYS = new List<BE.STORY>();
             foreach (DataRow registry in table.Rows)
-            {
-                STORYS.Add(ListStoryElementConvert(registry));
+            {                
+                STORYS.Add(GetStory(ListStoryElementConvert(registry).IdStory));
             }
             return STORYS;
         }
@@ -171,7 +183,7 @@ namespace DAL
             List<BE.STORY> STORYS = new List<BE.STORY>();
             foreach (DataRow registry in table.Rows)
             {
-                STORYS.Add(ListStoryElementConvert(registry));
+                STORYS.Add(GetStory(ListStoryElementConvert(registry).IdStory));
             }
             return STORYS;
         }
